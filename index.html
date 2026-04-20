@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frost — Cool treats for warm hearts. Handcrafted ice cream, gelato, and frozen desserts made with locally sourced ingredients.">
+  <meta name="keywords" content="ice cream, gelato, frozen desserts, bakery, catering, handcrafted treats">
+  <meta name="author" content="Frost Desserts">
+  <meta property="og:title" content="Frost — Cool Treats for Warm Hearts">
+  <meta property="og:description" content="Handcrafted ice cream, gelato, and frozen desserts made with locally sourced ingredients.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Frost — Cool Treats for Warm Hearts</title>
+
+  <!-- Google Fonts: Lora + Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- ==========================================
+       Mobile Hamburger Button
+       ========================================== -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+ <!-- ==========================================
+     Brightmoon Kids Sidebar Navigation
+     ========================================== -->
+<aside class="bm-sidebar" id="sidebar">
+
+  <!-- Floating Background Elements -->
+  <div class="bm-sidebar__bg">
+    <span class="bg-shape bg--sun"></span>
+    <span class="bg-shape bg--cloud"></span>
+    <span class="bg-shape bg--bubble"></span>
+  </div>
+
+  <!-- BRAND -->
+  <div class="bm-sidebar__brand">
+    <div class="bm-logo">Bright<span>moon</span></div>
+    <div class="bm-tagline">🌈 Fun Learning Starts Here</div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="bm-sidebar__nav">
+    <ul>
+      <li><a href="#hero" class="active">🏠 Home</a></li>
+      <li><a href="#about">🎨 About Camp</a></li>
+      <li><a href="#flavors">🧩 Activities</a></li>
+      <li><a href="#schedule">📅 Schedule</a></li>
+      <li><a href="#benefits">🌟 Benefits</a></li>
+      <li><a href="#register">🚀 Register</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CTA -->
+  <div class="bm-sidebar__cta">
+    <p>🔥 Admissions Open</p>
+    <a href="#register" class="bm-sidebar__btn">Enroll Now</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="bm-sidebar__footer">
+    <strong>⏰ Camp Timing</strong><br>
+    9:30 AM – 4:30 PM<br>
+    Age: 2.5 – 6 Years
+  </div>
+
+</aside>
+  <!-- ==========================================
+       Main Content
+       ========================================== -->
+  <main class="main">
+
+    <!-- ===== HERO SECTION (BRIGHTMOON SUMMER CAMP) ===== -->
+<section class="bm-hero" id="hero">
+
+    <!-- Kids Images Layer -->
+<div class="bm-kids">
+
+  <img src="images/kid-1-removebg-preview.png" class="kid kid--1" alt="Happy kid playing">
+  <img src="images/kid-2-removebg-preview.png" class="kid kid--2" alt="Child painting">
+  <img src="images/kid-2-removebg-preview.png" class="kid kid--3" alt="Kids learning">
+  <img src="images/kid-3-removebg-preview.png" class="kid kid--4" alt="Kids dancing" style="z-index: 999;">
+
+</div>
+
+  <!-- Floating Shapes -->
+  <div class="bm-shapes">
+    <span class="shape shape--circle"></span>
+    <span class="shape shape--triangle"></span>
+    <span class="shape shape--star"></span>
+    <span class="shape shape--bubble"></span>
+  </div>
+
+  <div class="bm-hero__content">
+    
+    <div class="bm-badge">🌞 Summer Camp 2026</div>
+
+    <h1 class="bm-title">
+      Fun Learning <br>
+      <span>Starts Here!</span>
+    </h1>
+
+    <p class="bm-subtitle" >
+      Give your child a joyful summer filled with creativity, play, and new friendships at Brightmoon Academy.
+    </p>
+
+    <div class="bm-actions">
+      <a href="#register" class="bm-btn bm-btn--primary">Enroll Now</a>
+      <a href="#about" class="bm-btn bm-btn--outline">Learn More</a>
+    </div>
+
+  </div>
+
+</section>
+
+      <!-- Decorative ice cream scoops -->
+      <div class="hero__deco" aria-hidden="true">
+        <div class="scoop scoop--strawberry">
+          <div class="scoop--highlight"></div>
+        </div>
+        <div class="scoop scoop--mint">
+          <div class="scoop--highlight"></div>
+        </div>
+        <div class="scoop scoop--vanilla">
+          <div class="scoop--highlight"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FLAVOR WHEEL — Ticker Marquee ======= -->
+    <section class="section section--alt flavors-section" id="flavors">
+      <div class="section__header reveal">
+  <span class="section__label">🌞 Summer Camp Highlights</span>
+  <h2 class="section__title">Fun Activities Your Kids Will Love</h2>
+  <p class="section__desc">
+    From creative play to skill-building activities, our summer camp keeps your child engaged, active, and happy every day.
+  </p>
+</div>
+
+      <!-- Row 1: scrolls left -->
+      <div class="marquee">
+        <div class="marquee__track">
+          <!-- Original set -->
+         <div class="flavor-card activity-card">
+  <div class="activity-icon">🎨</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Creative</span>
+    <h3 class="flavor-card__name">Arts & Crafts</h3>
+    <p class="flavor-card__desc">
+      Kids explore painting, coloring, and DIY crafts to boost creativity.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">🕺</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Fun</span>
+    <h3 class="flavor-card__name">Dance & Music</h3>
+    <p class="flavor-card__desc">
+      Energetic sessions with music, rhythm, and joyful movement.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">📖</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Learning</span>
+    <h3 class="flavor-card__name">Storytelling</h3>
+    <p class="flavor-card__desc">
+      Fun stories that improve imagination and communication skills.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">🧩</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Brain Boost</span>
+    <h3 class="flavor-card__name">Puzzle Games</h3>
+    <p class="flavor-card__desc">
+      Interactive games to improve thinking and problem-solving skills.
+    </p>
+  </div>
+</div>
+        </div>
+
+        <!-- Row 2: scrolls right (reverse) -->
+        <div class="marquee__track marquee__track--reverse">
+          <!-- Original set -->
+          <div class="flavor-card activity-card">
+  <div class="activity-icon">🎨</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Creative</span>
+    <h3 class="flavor-card__name">Arts & Crafts</h3>
+    <p class="flavor-card__desc">
+      Kids explore painting, coloring, and DIY crafts to boost creativity.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">🕺</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Fun</span>
+    <h3 class="flavor-card__name">Dance & Music</h3>
+    <p class="flavor-card__desc">
+      Energetic sessions with music, rhythm, and joyful movement.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">📖</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Learning</span>
+    <h3 class="flavor-card__name">Storytelling</h3>
+    <p class="flavor-card__desc">
+      Fun stories that improve imagination and communication skills.
+    </p>
+  </div>
+</div>
+
+<div class="flavor-card activity-card">
+  <div class="activity-icon">🧩</div>
+  <div class="flavor-card__info">
+    <span class="flavor-card__type">Brain Boost</span>
+    <h3 class="flavor-card__name">Puzzle Games</h3>
+    <p class="flavor-card__desc">
+      Interactive games to improve thinking and problem-solving skills.
+    </p>
+  </div>
+</div>
+        </div>
+      </div>
+
+
+      <!-- Kids Background -->
+
+
+
+<div class="camp-cta">
+  <h3>🔥 Admissions Open – Limited Seats!</h3>
+  <div class="btm">
+
+
+  <a href="#register" class="bm-btm bm-btm--primary">Enroll Now</a>
+  </div>
+</div>
+    </section>
+
+   <section class="bm-about" id="about">
+
+  <!-- FLOATING DECOR -->
+  <div class="bm-about__bg">
+    <span class="bg-blob blob1"></span>
+    <span class="bg-blob blob2"></span>
+    <span class="bg-star"></span>
+  </div>
+
+  <div class="bm-about__container">
+
+    <!-- LEFT: IMAGES -->
+    <div class="bm-about__visual">
+
+      <div class="img-card img-main">
+        <img src="images/school.jpg" alt="Kids learning and playing">
+      </div>
+
+      <div class="img-card img-small img-1">
+        <img src="images/grp.jpg" alt="Kids art activity">
+      </div>
+
+      <div class="img-card img-small img-2">
+        <img src="images/grp-1.JPG" alt="Kids playing outdoor">
+      </div>
+
+    </div>
+
+    <!-- RIGHT: CONTENT -->
+    <div class="bm-about__content">
+
+      <span class="bm-label">🌞 About Brightmoon</span>
+
+      <h2>
+        A Happy Place Where Kids <span>Learn & Grow</span>
+      </h2>
+
+      <p>
+        At Brightmoon Academy, we create a joyful environment where children explore, play, and learn naturally. 
+        Our summer camp is designed to build creativity, confidence, and social skills through fun activities.
+      </p>
+
+      <!-- FEATURES -->
+      <div class="bm-features">
+
+        <div class="feature-card">
+          🎨 Creative Learning
+        </div>
+
+        <div class="feature-card">
+          🤝 Social Skills
+        </div>
+
+        <div class="feature-card">
+          🌈 Safe Environment
+        </div>
+
+        <div class="feature-card">
+          🧠 Brain Development
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <a href="#register" class="bm-about__btn">
+        🚀 Admissions Open
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+   <section class="bm-benefits" id="benefits">
+
+  <!-- BACKGROUND DECOR -->
+  <div class="bm-benefits__bg">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="star"></span>
+  </div>
+
+  <!-- HEADER -->
+  <div class="bm-benefits__header">
+    <span class="bm-label">🌈 Why Choose Us</span>
+    <h2>What Your Child Will Gain</h2>
+    <p>Our summer camp is designed to help kids grow, learn, and enjoy every moment.</p>
+  </div>
+
+  <!-- BENEFITS GRID -->
+  <div class="bm-benefits__grid">
+
+    <div class="benefit-card">
+      <div class="icon">🎨</div>
+      <h3>Boost Creativity</h3>
+      <p>Art, crafts, and storytelling enhance imagination.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">🧠</div>
+      <h3>Brain Development</h3>
+      <p>Fun activities that improve thinking skills.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">🤝</div>
+      <h3>Social Skills</h3>
+      <p>Kids learn to interact and make new friends.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">💪</div>
+      <h3>Confidence Building</h3>
+      <p>Encourages self-expression and independence.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">🌿</div>
+      <h3>Active Lifestyle</h3>
+      <p>Outdoor play keeps kids healthy and active.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">📵</div>
+      <h3>Less Screen Time</h3>
+      <p>Engaging real-world activities reduce gadget use.</p>
+    </div>
+
+  </div>
+
+  <!-- TRUST (PARENT PROFILES) -->
+  <div class="bm-benefits__trust">
+
+  <div class="trust-cluster">
+
+    <div class="trust-avatar" data-name="Happy Parent">
+      <img src="images/C0091 - frame at 0m2s.jpg" alt="">
+      <span class="tooltip">Great experience!</span>
+    </div>
+
+    <div class="trust-avatar" data-name="Satisfied Parent">
+      <img src="images/C0079 - frame at 0m3s.jpg" alt="">
+      <span class="tooltip">My child loved it ❤️</span>
+    </div>
+
+    <div class="trust-avatar" data-name="Parent Review">
+      <img src="images/C0087 - frame at 0m4s.jpg" alt="">
+      <span class="tooltip">Highly recommended!</span>
+    </div>
+
+  </div>
+
+  <div class="trust-text">
+    <strong>500+</strong> Happy Parents Trust Brightmoon 🌈
+  </div>
+
+</div>
+
+  <!-- CTA -->
+  <div class="bm-benefits__cta">
+    <h3>🔥 Admissions Open – Limited Seats</h3>
+    <a href="#register" class="bm-btn">Enroll Now</a>
+  </div>
+
+</section>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+<section class="bm-schedule" id="schedule">
+
+  <!-- BACKGROUND -->
+  <div class="bm-schedule__bg">
+    <span class="blob blob1"></span>
+    <span class="blob blob2"></span>
+  </div>
+
+  <!-- HEADER -->
+  <div class="bm-schedule__header">
+    <span class="bm-label">📅 Camp Schedule</span>
+    <h2>Daily Fun Routine</h2>
+    <p>A perfect balance of learning, play, and relaxation.</p>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="bm-timeline">
+
+    <div class="timeline-item">
+      <div class="time">9:30 AM</div>
+      <div class="activity">🎈 Welcome & Free Play</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="time">10:00 AM</div>
+      <div class="activity">🎨 Arts & Crafts</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="time">10:45 AM</div>
+      <div class="activity">🍎 Snack Break</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="time">11:00 AM</div>
+      <div class="activity">📖 Storytelling</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="time">11:30 AM</div>
+      <div class="activity">🕺 Dance & Music</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="time">12:00 PM</div>
+      <div class="activity">🌿 Outdoor Play</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="bm-register" id="register">
+
+  <!-- BACKGROUND -->
+  <div class="bm-register__bg">
+    <span class="glow-circle"></span>
+    <span class="glow-circle glow2"></span>
+  </div>
+
+  <div class="bm-register__container">
+
+    <!-- LEFT CONTENT -->
+    <div class="bm-register__info">
+      <span class="bm-label">🚀 Admissions Open</span>
+      <h2>Enroll Your Child Today!</h2>
+      <p>Limited seats available. Secure your child’s spot for a fun-filled summer.</p>
+
+      <ul class="bm-register__points">
+        <li>✔ Safe & Friendly Environment</li>
+        <li>✔ Experienced Teachers</li>
+        <li>✔ Activity-Based Learning</li>
+      </ul>
+    </div>
+
+    <!-- FORM -->
+    <form class="bm-form">
+
+      <input type="text" placeholder="Parent Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Child Name" required>
+
+      <select>
+        <option>Child Age</option>
+        <option>2.5 Years</option>
+        <option>3 Years</option>
+        <option>4 Years</option>
+        <option>5+ Years</option>
+      </select>
+
+      <button type="submit">🎯 Register Now</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+  </main>
+
+  <!-- ==========================================
+       CONTACT SECTION
+       ========================================== -->
+  <section class="bm-contact" id="contact">
+    <div class="bm-contact__container">
+
+      <!-- HEADER -->
+      <div class="bm-contact__header">
+        <span class="bm-label">📞 Get In Touch</span>
+        <h2>Contact Brightmoon Academy</h2>
+        <p>Have questions about our summer camp? We're here to help!</p>
+      </div>
+
+      <!-- CONTACT GRID -->
+      <div class="bm-contact__grid">
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Address</h3>
+              <p>123 Rainbow Street<br>Brightmoon City, BC 12345</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div class="info-content">
+              <h3>Phone</h3>
+              <p>+1 (555) 123-BRIGHT<br>+1 (555) 456-MOON</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p>info@brightmoonacademy.com<br>admissions@brightmoonacademy.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🌐</div>
+            <div class="info-content">
+              <h3>Website</h3>
+              <p>www.brightmoonacademy.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🕒</div>
+            <div class="info-content">
+              <h3>Office Hours</h3>
+              <p>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">👤 Your Name</label>
+                <input type="text" id="contactName" name="contactName" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">✉️ Email</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">📝 Subject</label>
+              <input type="text" id="contactSubject" name="contactSubject" placeholder="What's this about?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">💬 Message</label>
+              <textarea id="contactMessage" name="contactMessage" placeholder="Tell us how we can help..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">
+              <span class="btn-text">📤 Send Message</span>
+              <span class="btn-loading" style="display: none;">⏳ Sending...</span>
+            </button>
+          </form>
+
+          <!-- Contact Success Message -->
+          <div id="contactSuccess" class="contact-success" style="display: none;">
+            <div class="success-icon">✅</div>
+            <h4>Message Sent!</h4>
+            <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BACKGROUND DECOR -->
+      <div class="bm-contact__bg">
+        <span class="contact-blob blob1"></span>
+        <span class="contact-blob blob2"></span>
+        <span class="contact-star star1">⭐</span>
+        <span class="contact-star star2">🌟</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ENROLLMENT POPUP MODAL
+       ========================================== -->
+  <div id="enrollmentModal" class="enrollment-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <!-- Floating decorative elements -->
+      <div class="modal-decor">
+        <div class="decor-star star-1">⭐</div>
+        <div class="decor-star star-2">🌟</div>
+        <div class="decor-bubble bubble-1">🫧</div>
+        <div class="decor-bubble bubble-2">🎈</div>
+        <div class="decor-bubble bubble-3">🎨</div>
+      </div>
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-icon">🚀</div>
+        <h2 class="modal-title">Enroll Your Child Today!</h2>
+        <p class="modal-subtitle">Join our magical summer adventure 🌈</p>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+
+      <!-- Enrollment Form -->
+      <form id="enrollmentForm" class="enrollment-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="studentName">👶 Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter child's full name" required>
+          </div>
+          <div class="form-group">
+            <label for="studentAge">🎂 Age</label>
+            <select id="studentAge" name="studentAge" required>
+              <option value="">Select age</option>
+              <option value="2.5">2.5 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="parentName">👨‍👩‍👧 Parent/Guardian Name</label>
+            <input type="text" id="parentName" name="parentName" placeholder="Enter parent's full name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">📱 Parent Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">✉️ Email Address</label>
+            <input type="email" id="email" name="email" placeholder="parent@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">📱 Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="website">🌐 Website (Optional)</label>
+            <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+          </div>
+          <div class="form-group">
+            <label for="location">📍 Location/City</label>
+            <input type="text" id="location" name="location" placeholder="City, State" required>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="specialNeeds">🩺 Special Needs or Allergies (Optional)</label>
+          <textarea id="specialNeeds" name="specialNeeds" placeholder="Any medical conditions, allergies, or special requirements..." rows="3"></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">💬 Additional Message (Optional)</label>
+          <textarea id="message" name="message" placeholder="Tell us about your child's interests or any questions..." rows="3"></textarea>
+        </div>
+
+        <!-- Terms and Submit -->
+        <div class="form-footer">
+          <div class="terms-checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label>
+          </div>
+          <button type="submit" class="enroll-submit-btn">
+            <span class="btn-text">🎯 Complete Enrollment</span>
+            <span class="btn-loading" style="display: none;">⏳ Processing...</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="success-message" style="display: none;">
+        <div class="success-icon">🎉</div>
+        <h3>Enrollment Submitted!</h3>
+        <p>Thank you for enrolling your child! We'll contact you within 24 hours to confirm their spot.</p>
+        <button class="success-close-btn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
