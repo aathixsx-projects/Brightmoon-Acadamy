@@ -43,7 +43,7 @@ https://templatemo.com/tm-613-frost-bakery
       const hamburger   = document.getElementById('hamburger');
       const sidebar     = document.getElementById('sidebar');
       const overlay     = document.getElementById('sidebarOverlay');
-      const navLinks    = sidebar.querySelectorAll('.sidebar__nav a');
+      const navLinks    = sidebar.querySelectorAll('.bm-sidebar__nav a');
 
       function openMenu() {
         sidebar.classList.add('is-open');
@@ -151,7 +151,11 @@ https://templatemo.com/tm-613-frost-bakery
             e.preventDefault();
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-
+            // Set active class on click
+            navLinks.forEach(function (link) {
+              link.classList.remove('active');
+            });
+            this.classList.add('active');
           }
         });
       });

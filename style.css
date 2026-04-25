@@ -551,7 +551,6 @@ button {
   padding: 25px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
 
   /* GLASS + GRADIENT */
@@ -623,12 +622,12 @@ button {
 }
 
 .bm-sidebar__nav li {
-  margin: 12px 0;
+  margin: 10px 0;
 }
 
 .bm-sidebar__nav a {
   display: block;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 12px;
   text-decoration: none;
   color: #333;
@@ -652,8 +651,8 @@ button {
 
 .bm-sidebar__btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
+  margin-top: 8px;
+  padding: 8px 16px;
   border-radius: 25px;
   background: linear-gradient(45deg, #ff3cac, #784ba0);
   color: #fff;
@@ -670,7 +669,12 @@ button {
 /* FOOTER */
 .bm-sidebar__footer {
   font-size: 13px;
-  color: #444;
+  color: #000;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border-top: 2px solid #ff6b6b;
+  margin-top: 8px;
 }
 
 /* ANIMATIONS */
@@ -1269,7 +1273,11 @@ button {
 	font-weight: 700;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
-	color: var(--terracotta);
+	color: #fff;
+	background: linear-gradient(45deg,#ff7a00,#ff3cac);
+	padding: 6px 18px;
+	border-radius: 10px;
+	width: 100%;
 	margin-bottom: 0.75rem;
 }
 
@@ -2323,7 +2331,8 @@ button {
   background: linear-gradient(45deg,#ff7a00,#ff3cac);
   color: #fff !important;
   padding: 6px 18px;
-  border-radius: 30px;
+  border-radius: 10px;
+  width: 100%;
   margin-bottom: 10px;
   animation: float 3s infinite;
 }
@@ -2429,8 +2438,9 @@ button {
   background: linear-gradient(45deg,#ff7a00,#ff3cac);
   color: #fff;
   padding: 6px 18px;
-  border-radius: 30px;
+  border-radius: 10px;
   display: inline-block;
+  width: 100%;
   margin-bottom: 10px;
   animation: float 3s infinite;
 }
@@ -2816,8 +2826,9 @@ button {
   background: linear-gradient(45deg, #ff7a00, #ff3cac);
   color: #fff;
   padding: 6px 18px;
-  border-radius: 30px;
+  border-radius: 10px;
   display: inline-block;
+  width: 100%;
   margin-bottom: 15px;
   animation: float 3s infinite;
 }
@@ -3524,4 +3535,60 @@ button {
   .modal-icon {
     font-size: 36px;
   }
-}
+}/ *   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+               C O N T A C T   R E S P O N S I V E 
+               = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =   * / 
+ @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
+     . b m - c o n t a c t _ _ g r i d   { 
+         g r i d - t e m p l a t e - c o l u m n s :   1 f r ; 
+         g a p :   4 0 p x ; 
+     } 
+ 
+     . c o n t a c t - f o r m   { 
+         p a d d i n g :   3 0 p x   2 0 p x ; 
+     } 
+ 
+     . c o n t a c t - f o r m   . f o r m - r o w   { 
+         g r i d - t e m p l a t e - c o l u m n s :   1 f r ; 
+         g a p :   1 5 p x ; 
+     } 
+ 
+     . i n f o - i t e m   { 
+         p a d d i n g :   2 0 p x ; 
+         f l e x - d i r e c t i o n :   c o l u m n ; 
+         t e x t - a l i g n :   c e n t e r ; 
+         g a p :   1 5 p x ; 
+     } 
+ 
+     . i n f o - i c o n   { 
+         f o n t - s i z e :   2 8 p x ; 
+     } 
+ } 
+ 
+ @ m e d i a   ( m a x - w i d t h :   4 8 0 p x )   { 
+     . b m - c o n t a c t   { 
+         p a d d i n g :   6 0 p x   1 5 p x ; 
+     } 
+ 
+     . b m - c o n t a c t _ _ h e a d e r   h 2   { 
+         f o n t - s i z e :   2 r e m ; 
+     } 
+ 
+     . c o n t a c t - f o r m   { 
+         p a d d i n g :   2 5 p x   1 5 p x ; 
+     } 
+ 
+     . c o n t a c t - s u b m i t - b t n   { 
+         f o n t - s i z e :   1 6 p x ; 
+         p a d d i n g :   1 4 p x   2 0 p x ; 
+     } 
+ } 
+ 
+
+
+
+
+
+
+
+
