@@ -552,6 +552,9 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transform: translateX(0); /* Add transform for animation */
+  transition: transform 0.3s ease;
+  z-index: 1000;
 
   /* GLASS + GRADIENT */
   background: linear-gradient(180deg, #ffdee9, #b5e3ff);
@@ -765,6 +768,11 @@ button {
 
 .sidebar-overlay.is-visible {
 	opacity: 1;
+}
+
+/* Ensure mobile sidebar stays above overlay */
+.bm-sidebar.is-open {
+	z-index: 1000;
 }
 
 /* ============================================
@@ -2177,12 +2185,12 @@ button {
 		--sidebar-width: 0px;
 	}
 
-	.sidebar {
+	.sidebar, .bm-sidebar {
 		transform: translateX(-100%);
 		width: 280px;
 	}
 
-	.sidebar.is-open {
+	.sidebar.is-open, .bm-sidebar.is-open {
 		transform: translateX(0);
 	}
 
@@ -3592,3 +3600,280 @@ button {
 
 
 
+
+
+/* ============================================
+       COMPREHENSIVE RESPONSIVE DESIGN FOR ALL BRIGHTMOON SECTIONS
+       ============================================ */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .bm-hero {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  .bm-title {
+    font-size: 2.5rem;
+  }
+
+  .bm-badge {
+    font-size: 24px;
+    padding: 8px 18px;
+  }
+
+  .bm-kids .kid {
+    width: 80px;
+  }
+
+  .kid--2, .kid--3, .kid--4 {
+    width: 100px;
+  }
+
+  /* About Section */
+  .bm-about__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bm-about__visual {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .bm-about__content {
+    text-align: center;
+  }
+
+  .bm-about__content h2 {
+    font-size: 2rem;
+  }
+
+  /* Benefits Section */
+  .bm-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Register Section */
+  .bm-register__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bm-register__info, .bm-form {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Contact Section */
+  .bm-contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .bm-hero {
+    padding: 60px 15px;
+  }
+
+  .bm-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .bm-subtitle {
+    font-size: 1rem;
+  }
+
+  .bm-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bm-btn {
+    margin: 5px 0;
+    width: 200px;
+    text-align: center;
+  }
+
+  .bm-kids .kid {
+    width: 60px;
+  }
+
+  .kid--2, .kid--3, .kid--4 {
+    width: 80px;
+  }
+
+  /* About Section */
+  .bm-about {
+    padding: 60px 15px;
+  }
+
+  .bm-about__content h2 {
+    font-size: 1.8rem;
+  }
+
+  .bm-features {
+    grid-template-columns: 1fr;
+  }
+
+  /* Flavors/Activities Section */
+  .flavors-section {
+    padding: 60px 15px;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+  }
+
+  .marquee {
+    overflow: hidden;
+  }
+
+  .flavor-card {
+    min-width: 250px;
+    margin: 0 10px;
+  }
+
+  /* Benefits Section */
+  .bm-benefits {
+    padding: 60px 15px;
+  }
+
+  .bm-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .benefit-card {
+    padding: 15px;
+  }
+
+  .bm-benefits__trust .trust-cluster {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Register Section */
+  .bm-register {
+    padding: 60px 15px;
+  }
+
+  .bm-register__info h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Contact Section */
+  .bm-contact {
+    padding: 60px 15px;
+  }
+
+  .bm-contact__header h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info .info-item {
+    padding: 15px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .bm-hero {
+    padding: 40px 10px;
+  }
+
+  .bm-title {
+    font-size: 1.8rem;
+  }
+
+  .bm-badge {
+    font-size: 20px;
+    padding: 6px 15px;
+  }
+
+  .bm-kids .kid {
+    width: 50px;
+  }
+
+  .kid--2, .kid--3, .kid--4 {
+    width: 70px;
+  }
+
+  /* About Section */
+  .bm-about {
+    padding: 40px 10px;
+  }
+
+  .bm-about__content h2 {
+    font-size: 1.5rem;
+  }
+
+  .img-card.img-small {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Flavors Section */
+  .flavors-section {
+    padding: 40px 10px;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .flavor-card {
+    min-width: 200px;
+    padding: 15px;
+  }
+
+  .flavor-card__name {
+    font-size: 0.9rem;
+  }
+
+  .flavor-card__desc {
+    font-size: 0.8rem;
+  }
+
+  /* Benefits Section */
+  .bm-benefits {
+    padding: 40px 10px;
+  }
+
+  .bm-benefits__header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Register Section */
+  .bm-register {
+    padding: 40px 10px;
+  }
+
+  .bm-register__info h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Contact Section */
+  .bm-contact {
+    padding: 40px 10px;
+  }
+
+  .bm-contact__header h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 20px 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
